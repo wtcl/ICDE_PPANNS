@@ -31,9 +31,11 @@ Note : M, efc, efs are the parameters of HNSW, efsm is maximum efsearch, efss is
 s and beta are the parameters of DCPE.
 k is the num of kANN.
 ratio is the ratio of k' to k.
-exp=1: conduct the experiment that find the beta, as shown in Figure 5.
-exp=2: conduct the experiment that find the ratio, as shown in Figure 6.
-exp=3: conduct the experiment that compare with baseline, as shown in Figure 7 and 8.
+exp=1: conduct the experiment that find the beta, as shown in Figure 3.
+exp=2: conduct the experiment that find the ratio, as shown in Figure 4.
+exp=3: conduct the experiment that compare with baseline, as shown in Figure 5 and 6.
 database, dataquery and groundtruth are the input files, please give the absolute paths.
 
 And, you should edit the CMakeLists.txt to replace the path of libraries with your path.
+
+
