@@ -20,6 +20,8 @@ cmake ..
 make
 ```
 
+If errors occur during the compilation process, please first ensure that the aforementioned software has been correctly installed on your device, and then edit the environment path in the CMakeList.txt file to match yours. After completing the above steps, please recompile.
+
 ## Usage
 
 You can edit the file `run.sh` for your experiments.

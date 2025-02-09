@@ -27,7 +27,7 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 endif()
 
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx -mavx2 -mfma -msse2 -DNDEBUG -Ofast -ffast-math -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -pthread -fno-rtti -flto -DMKL-ILP64 -lmkl_sequential -lmkl_intel_lp64 -lmkl_core -g0 -lopenblas -lgfortran -DCMAKE_BUILD_TYPE=Release -DEIGEN_FAST_MATH=1")
-#
+
 add_executable(HNSWAME main.cpp
         hnswlib/hnswlib/bruteforce.h
         hnswlib/hnswlib/hnswalg.h

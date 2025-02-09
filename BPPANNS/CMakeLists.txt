@@ -6,14 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories("/home/zhangyd/soft/intel/oneapiall/2024.1/include/" "/home/zhangyd/soft/intel/oneapi/mkl/2024.1/include/" "/home/zhangyd/soft/openblas/include/" hnswlib/hnswlib/)
 link_directories("/home/zhangyd/soft/intel/oneapiall/2024.1/lib/" "/home/zhangyd/soft/intel/oneapi/mkl/2024.1/lib/" "/home/zhangyd/soft/openblas/lib/")
 
-#set(FAISS_INCLUDE_DIR "/home/dadi/soft/anaconda3/include/faiss")
-#set(FAISS_LIBRARY "/home/dadi/soft/anaconda3/lib/libfaiss.so")
-#include_directories(${FAISS_INCLUDE_DIR})
-#link_libraries(${FAISS_LIBRARY})
-
-#include_directories("/opt/intel/oneapi/2024.1/include/" "/opt/intel/oneapi/mkl/2024.1/include/" "/opt/openblas/include/" "/home/dadi/soft/anaconda3/include/" hnswlib/hnswlib/)
-#link_directories("/opt/intel/oneapi/2024.1/lib/" "/opt/openblas/lib/" "/opt/intel/oneapi/mkl/2024.1/lib/" "/home/dadi/soft/anaconda3/lib/")
-
 
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -36,7 +28,7 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 endif()
 
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx -mavx2 -mfma -msse2 -DNDEBUG -Ofast -ffast-math -lrt -DHAVE_CXX0X -march=native -fpic -w -fopenmp -ftree-vectorize -ftree-vectorizer-verbose=0 -pthread -fno-rtti -flto -DMKL-ILP64 -lmkl_sequential -lmkl_intel_lp64 -lmkl_core -g0 -lopenblas -lgfortran -DCMAKE_BUILD_TYPE=Release -DEIGEN_FAST_MATH=1")
-#
+
 add_executable(BPPANNS main.cpp
         hnswlib/hnswlib/bruteforce.h
         hnswlib/hnswlib/hnswalg.h

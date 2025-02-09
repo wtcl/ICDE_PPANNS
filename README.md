@@ -23,12 +23,16 @@ cmake g++ openmp mkl openblas gfortran pthread
 
 ### Compile
 
+Note, you should edit the CMakeLists.txt to replace the path of libraries with your path at first.
+
 ```
 cd PPANNS/
 cd build
 cmake ..
 make
 ```
+
+If errors occur during the compilation process, please first ensure that the aforementioned software has been correctly installed on your device, and then edit the environment path in the CMakeList.txt file to match yours. After completing the above steps, please recompile.
 
 ## Usage
 
